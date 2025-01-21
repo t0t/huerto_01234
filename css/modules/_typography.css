@@ -1,0 +1,46 @@
+/* Headings */
+h1, h2, h3 {
+    /* line-height: 1.2; */
+    letter-spacing: 0.05em;
+}
+
+p, a {
+    line-height: 1.5;
+        /* font-weight: 500; */
+        font-size: var(--font-xs);
+        margin-bottom: var(--space-xs);
+}
+
+
+
+.hero h1 {
+    font-size: var(--font-lg);
+    /* line-height: 1; */
+    margin-bottom: var(--space-xs);
+}
+
+.hero h2 {
+    font-size: var(--font-md);
+    /* line-height: 1; */
+    font-weight: 300;
+    color: var(--gray-400);
+}
+
+.grid-item h3 {
+    /* mix-blend-mode: difference; */
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-xxs);
+}
+
+/* Paragraphs */
+.grid-item p {
+    /* mix-blend-mode: difference; */
+    filter: contrast(200%) brightness(200%);
+    position: relative;
+    z-index: 1;
+    /* text-shadow: 0 1px 0 rgba(0,0,0,0.4); */
+
+}

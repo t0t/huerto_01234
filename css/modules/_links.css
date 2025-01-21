@@ -1,0 +1,45 @@
+/* Enlaces base */
+.hero a {
+    color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--space-xxs) var(--space-xs);
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+/* Enlaces de grid */
+.grid-item a {
+    filter: none;
+    color: var(--color-black);
+    padding: var(--space-xxs) var(--space-xs);
+    margin-top: var(--space-xs);
+    border-radius: calc(var(--rhythm) * 0.125);
+    transition: all 0.3s ease;
+    font-weight: lighter;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-item:hover a {
+    transform: skewX(-5deg);
+    filter: brightness(1.1);
+}
+
+/* Enlaces externos */
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+/* Ocultar icono por defecto */
+.external-link .ph-arrow-square-out {
+    display: none;
+    transition: transform 0.2s ease;
+}
+
+/* Mostrar icono en hover */
+.external-link:hover .ph-arrow-square-out {
+    display: inline-block;
+    transform: translate(2px, -2px);
+}

@@ -1,0 +1,39 @@
+/* Estilos base para iconos */
+.ph {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    --weight: var(--icon-weight);
+}
+
+/* Tamaños de iconos */
+.ph-xs { font-size: var(--icon-size-xs); }
+.ph-sm { font-size: var(--icon-size-sm); }
+.ph-md { font-size: var(--icon-size-md); }
+.ph-lg { font-size: var(--icon-size-lg); }
+
+/* Animaciones para iconos */
+.ph-spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.ph-pulse {
+    animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+
+/* Alineación con texto */
+.icon-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xxs);
+}
