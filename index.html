@@ -10,6 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos existentes */
+        /* ... */
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--color-background);
+            border: 2px solid var(--color-border);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .scroll-to-top i {
+            font-size: 2.5rem;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--color-border);
+        }
+    </style>
 </head>
 <body>
     <div class="hero">
@@ -22,8 +56,10 @@
         <div class="grid-item">
             <h3>Sergio Forés</h3>
             <p>Portfolio personal y blog sobre arte, diseño y desarrollo web</p>
+            <p>El contenido que has proporcionado parece centrarse en temas de autoconocimiento, creación, y la relación entre el ser humano y la creación universal. Se menciona la importancia de la luz, el simbolismo, y el aprendizaje continuo a través de la experiencia y la reflexión. También se hace referencia a conceptos de la cábala y las letras hebreas, sugiriendo una conexión espiritual y filosófica en el proceso de entender la existencia y la verdad personal.
+                Los textos abordan la idea de que el ser humano es un vehículo para la creación y la expresión de la verdad, enfatizando la necesidad de ser consciente de uno mismo y de la realidad que nos rodea. Además, se habla de la evolución personal y del proceso de manifestar la propia verdad a través de diversas formas de arte y expresión.</p>
             <a href="http://sergiofores.es" target="_blank" class="external-link icon-text">
-                sergiofores.es
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -31,7 +67,7 @@
             <h3>Parcel</h3>
             <p>Experimentos con Parcel bundler y desarrollo web moderno</p>
             <a href="https://parcel-t0t.vercel.app/" target="_blank" class="external-link icon-text">
-                parcel
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -39,7 +75,7 @@
             <h3>Todh React</h3>
             <p>Aplicación de gestión de tareas construida con React</p>
             <a href="https://t0t.github.io/todh-react/#/?_k=o98uax" target="_blank" class="external-link icon-text">
-                todh
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -47,7 +83,7 @@
             <h3>todh-react</h3>
             <p>Aplicación de gestión de tareas construida con React</p>
             <a href="https://t0t.github.io/todh-react/#/?_k=a5wh79" target="_blank" class="external-link icon-text">
-                todh
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -55,7 +91,7 @@
             <h3>SF</h3>
             <p>Proyecto personal de experimentación con React y diseño minimalista</p>
             <a href="https://t0t.github.io/sf/#/?_k=arhci3" target="_blank" class="external-link icon-text">
-                sf
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -63,7 +99,7 @@
             <h3>01234</h3>
             <p>Proyecto de investigación sobre numerología y patrones</p>
             <a href="https://01234.vercel.app/" target="_blank" class="external-link icon-text">
-                -01234
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -71,7 +107,7 @@
             <h3>Noelia Requena</h3>
             <p>Portfolio artístico y galería de obras</p>
             <a href="https://noeliarequena.com" target="_blank" class="external-link icon-text">
-                noeliarequena.com
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -79,7 +115,7 @@
             <h3>MF Barcelona</h3>
             <p>Sitio web para estudio de masaje y fisioterapia</p>
             <a href="https://t0t.github.io/mfbarcelona/" target="_blank" class="external-link icon-text">
-                mfbarcelona
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -87,7 +123,7 @@
             <h3>Holistic Prototype</h3>
             <p>Prototipo de aplicación para terapias holísticas</p>
             <a href="https://t0t.github.io/holistic-prototype/" target="_blank" class="external-link icon-text">
-                holistic-prototype
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -95,7 +131,7 @@
             <h3>Crea MiniDB</h3>
             <p>Mini base de datos para gestión de proyectos creativos</p>
             <a href="https://t0t.github.io/crea_minidb/" target="_blank" class="external-link icon-text">
-                crea_minidb
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -103,7 +139,7 @@
             <h3>Gematria App</h3>
             <p>Aplicación para cálculos y análisis de gematría</p>
             <a href="https://gematriaapp.vercel.app/" target="_blank" class="external-link icon-text">
-                gematriaapp
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -111,7 +147,7 @@
             <h3>Repositorio v4</h3>
             <p>Cuarta versión del repositorio de conocimiento personal</p>
             <a href="https://t0t.github.io/repositorio_01234_v4/" target="_blank" class="external-link icon-text">
-                repositorio_01234_v4
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -119,7 +155,7 @@
             <h3>Repositorio v3</h3>
             <p>Tercera iteración del sistema de gestión de conocimiento</p>
             <a href="https://t0t.github.io/repositorio_01234_v3/" target="_blank" class="external-link icon-text">
-                repositorio_01234_v3
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -127,7 +163,7 @@
             <h3>Repositorio v2</h3>
             <p>Segunda versión del sistema de documentación personal</p>
             <a href="https://t0t.github.io/repositorio_01234" target="_blank" class="external-link icon-text">
-                repositorio_01234_v2
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -135,7 +171,7 @@
             <h3>Static Blog Landing</h3>
             <p>Landing page minimalista para blog estático</p>
             <a href="https://static-blog-landing.lovable.app/" target="_blank" class="external-link icon-text">
-                static-blog-landing
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -143,7 +179,7 @@
             <h3>Conceptual DB Vite</h3>
             <p>Base de datos conceptual construida con Vite</p>
             <a href="https://silver-sorbet-d12e2c.netlify.app/" target="_blank" class="external-link icon-text">
-                conceptual_db_vite
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -151,7 +187,7 @@
             <h3>Conceptual DB</h3>
             <p>Sistema de organización de conceptos e ideas</p>
             <a href="https://stackblitz.com/edit/bolt-vitepress-y5rmb9vu?file=README.md" target="_blank" class="external-link icon-text">
-                conceptual_db
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -159,7 +195,7 @@
             <h3>Blog Minimalista</h3>
             <p>Blog con diseño minimalista y enfoque en el contenido</p>
             <a href="https://wondrous-melba-5d9c40.netlify.app/" target="_blank" class="external-link icon-text">
-                blogminimalista
+                Abrir
                 <i class="ph ph-arrow-square-out ph-xs"></i>
             </a>
         </div>
@@ -174,12 +210,699 @@
             <a href="#" target="_blank">01234-design-system</a>
         </div>
     </div>
+    
+    <hr>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Mootion.com/</h3>
+            <p>Phttps://storyteller.mootion.com/</p>
+            <a href="https://storyteller.mootion.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <dd>
+            <dt>Mondial 3D</dt>
+            <dd>Sumérgete en diversos modelos 3D o crea los tuyos con nuestra herramienta de IA.</dd>
+            <dd><a href="https://mondia3d.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a></dd>
+        </dd>
+        <dd>
+            <dt>iaperfecta</dt>
+            <dd>Directorio de herramientas IA</dd>
+            <dd><a href="https://iaperfecta.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a></dd>
+        </dd>
+        <div class="grid-item">
+            <h3>FastFlux</h3>
+            <p>Herramienta de flujo de trabajo automatizado</p>
+            <a href="https://fastflux.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>GenieEngage</h3>
+            <p>Plataforma de engagement con IA</p>
+            <a href="https://genieengage.tech/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>InPodcast</h3>
+            <p>Creación de podcasts con IA</p>
+            <a href="https://inpodcast.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Stratup AI</h3>
+            <p>Herramientas de IA para startups</p>
+            <a href="https://stratup.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Clip Studio</h3>
+            <p>Software de ilustración y animación</p>
+            <a href="https://clip.studio/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>TarotAP</h3>
+            <p>Lecturas de tarot con IA</p>
+            <a href="https://tarotap.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>AI Idea Flow Podcast</h3>
+            <p>Podcast sobre flujos de trabajo con IA</p>
+            <a href="https://aideaflowpodcast.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>InstaInfluencer</h3>
+            <p>Herramientas para influencers con IA</p>
+            <a href="https://www.instainfluencer.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Git Podcast</h3>
+            <p>Podcast sobre desarrollo y Git</p>
+            <a href="https://www.gitpodcast.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Make Headline</h3>
+            <p>Generador de títulos con IA</p>
+            <a href="https://www.makeheadline.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>PicLumen</h3>
+            <p>Editor de imágenes con IA</p>
+            <a href="https://www.piclumen.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Eightify</h3>
+            <p>Herramienta de resumen y análisis de contenido</p>
+            <a href="https://eightify.app/?ref=iaperfecta&utm_source=iaperfecta&utm_medium=referral" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>AI Pattern</h3>
+            <p>Generador de patrones con IA</p>
+            <a href="https://aipattern.forit.ai/es?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Brainy Bear</h3>
+            <p>Plataforma educativa con IA</p>
+            <a href="https://brainybear.ai/?ref=iaperfecta&utm_source=iaperfecta&utm_medium=referral" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Make3D</h3>
+            <p>Creación de modelos 3D con IA</p>
+            <a href="https://make3d.app/?ref=iaperfecta&utm_source=iaperfecta&utm_medium=referral" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Dictaphone</h3>
+            <p>Transcripción y dictado por voz</p>
+            <a href="https://www.dictaphone.io/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>DreamGen</h3>
+            <p>Generador de historias con IA</p>
+            <a href="https://dreamgen.com/story-writing" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Napkin AI</h3>
+            <p>Herramienta de ideación y bocetos</p>
+            <a href="https://www.napkin.ai/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Vizard</h3>
+            <p>Plataforma de visualización de datos</p>
+            <a href="https://vizard.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>AI Sixteen</h3>
+            <p>Suite de herramientas de IA</p>
+            <a href="https://aisixteen.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Vose AI</h3>
+            <p>Creación de imágenes con IA</p>
+            <a href="https://vose.ai/create-image" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Summary AI</h3>
+            <p>Resumen automático de textos</p>
+            <a href="https://summaryai.online/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>PFP Maker</h3>
+            <p>Creador de fotos de perfil</p>
+            <a href="https://pfpmaker.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Rolly App</h3>
+            <p>Aplicación de productividad con IA</p>
+            <a href="https://www.rollyapp.site/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Immagic</h3>
+            <p>Editor de imágenes con IA</p>
+            <a href="https://immagic.ai/image" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Kling AI</h3>
+            <p>Asistente virtual inteligente</p>
+            <a href="https://www.klingai.com/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Hailuo AI</h3>
+            <p>Creación de videos con IA</p>
+            <a href="https://hailuoai.video/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Animoto</h3>
+            <p>Editor de video online</p>
+            <a href="https://animoto.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Resemble AI</h3>
+            <p>Clonación de voz con IA</p>
+            <a href="https://www.resemble.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Design Stripe</h3>
+            <p>Recursos de diseño e ilustración</p>
+            <a href="https://designstripe.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Pictory</h3>
+            <p>Creación automática de videos</p>
+            <a href="https://pictory.ai/?el=2000b&htrafficsource=pictoryblog" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Easy with AI</h3>
+            <p>Herramientas de transcripción con IA</p>
+            <a href="https://easywithai.com/ai-transcription-tools/sonix/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Text2Color</h3>
+            <p>Generador de paletas de colores</p>
+            <a href="https://text2color.com/forcanva.html" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>GPT Excel</h3>
+            <p>IA para hojas de cálculo</p>
+            <a href="https://gptexcel.uk/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Hey Dola</h3>
+            <p>Asistente virtual para negocios</p>
+            <a href="https://heydola.com/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>PixelCut AI</h3>
+            <p>Editor de imágenes automático</p>
+            <a href="https://www.pixelcut.ai/es" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Whenable</h3>
+            <p>Automatización de tareas con IA</p>
+            <a href="https://info.whenable.app/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Icebreaking Lab</h3>
+            <p>Generador de conversaciones</p>
+            <a href="https://www.icebreakinglab.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Lumen5</h3>
+            <p>Creador de videos con IA</p>
+            <a href="https://lumen5.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Scrap</h3>
+            <p>Herramienta de web scraping</p>
+            <a href="https://scrap.so/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>GodMode</h3>
+            <p>Asistente de productividad con IA</p>
+            <a href="https://godmode.space/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Magic Dev</h3>
+            <p>Plataforma de desarrollo con IA</p>
+            <a href="https://magic.dev/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Ideogram</h3>
+            <p>Generación de imágenes con IA</p>
+            <a href="https://ideogram.ai/t/explore?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Fal AI</h3>
+            <p>Plataforma de IA en la nube</p>
+            <a href="https://fal.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Suno</h3>
+            <p>Generación de música con IA</p>
+            <a href="https://iaperfecta.com/suno-v3/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Pika</h3>
+            <p>Creación de arte con IA</p>
+            <a href="https://pika.art/login" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Grok AI</h3>
+            <p>Modelo de lenguaje avanzado</p>
+            <a href="https://x.ai/grok?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>ACCA Software</h3>
+            <p>Software para arquitectura y construcción</p>
+            <a href="https://www.accasoftware.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>ArchiTechtures</h3>
+            <p>Plataforma de diseño arquitectónico</p>
+            <a href="https://architechtures.com/en" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Logo Difusion</h3>
+            <p>Generador de logos con IA</p>
+            <a href="https://iaperfecta.com/logodifusion/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>InVideo</h3>
+            <p>Editor de video online</p>
+            <a href="https://invideo.io/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Perplexity AI</h3>
+            <p>Motor de búsqueda con IA</p>
+            <a href="https://www.perplexity.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Hedra</h3>
+            <p>Plataforma de aprendizaje adaptativo</p>
+            <a href="https://www.hedra.com/?ref=iaperfecta" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Rebyte AI</h3>
+            <p>Automatización de procesos con IA</p>
+            <a href="https://rebyte.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Soopra AI</h3>
+            <p>Asistente de marketing con IA</p>
+            <a href="https://soopra.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Omnes Link</h3>
+            <p>Plataforma de networking inteligente</p>
+            <a href="https://omneslink.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Fintool</h3>
+            <p>Herramientas financieras con IA</p>
+            <a href="https://fintool.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Bulk Corrector</h3>
+            <p>Corrección masiva de textos</p>
+            <a href="https://bulkcorrector.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Memo</h3>
+            <p>Gestión de notas con IA</p>
+            <a href="https://memo.ac/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Hubit Plan</h3>
+            <p>Planificación de negocios con IA</p>
+            <a href="https://hubitplan.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Symphony</h3>
+            <p>Automatización de flujos de trabajo</p>
+            <a href="https://www.symphony.run/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Spelly AI</h3>
+            <p>Corrector ortográfico inteligente</p>
+            <a href="https://spelly.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>AI QR Hub</h3>
+            <p>Generador de códigos QR con IA</p>
+            <a href="https://aiqrhub.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Cypher</h3>
+            <p>Plataforma de seguridad con IA</p>
+            <a href="https://cypher.is/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>FAQ Bot</h3>
+            <p>Chatbot para preguntas frecuentes</p>
+            <a href="https://faqbot.co/login" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Dream Generator</h3>
+            <p>Generador de imágenes de sueños</p>
+            <a href="https://dreamgenerator.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>KBase Bot</h3>
+            <p>Base de conocimiento con IA</p>
+            <a href="https://kbasebot.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Better Image</h3>
+            <p>Mejora de imágenes con IA</p>
+            <a href="https://betterimage.ai/es" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Live Polls</h3>
+            <p>Encuestas en tiempo real</p>
+            <a href="https://www.livepolls.app/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Site With AI</h3>
+            <p>Creador de sitios web con IA</p>
+            <a href="https://sitewith.ai/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Doc2Lang</h3>
+            <p>Traductor de documentos</p>
+            <a href="https://doc2lang.com/es" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Hiber3D</h3>
+            <p>Plataforma de modelado 3D</p>
+            <a href="https://hiber3d.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>AI Magic X</h3>
+            <p>Suite de herramientas de IA</p>
+            <a href="https://www.aimagicx.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Boords</h3>
+            <p>Herramienta de storyboarding</p>
+            <a href="https://boords.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Fantasaur</h3>
+            <p>Generador de arte fantástico</p>
+            <a href="https://www.fantasaur.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Swap My Face</h3>
+            <p>Intercambio de rostros con IA</p>
+            <a href="https://swapmyface.app/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Wavo AI</h3>
+            <p>Procesamiento de audio con IA</p>
+            <a href="https://wavoai.com/uploads?prs=1" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Pinokio</h3>
+            <p>Automatización de navegador con IA</p>
+            <a href="https://pinokio.computer/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h3>Notebook LM</h3>
+            <p>Cuaderno de notas con IA de Google</p>
+            <a href="https://notebooklm.google.com/" target="_blank" class="external-link icon-text">
+                Abrir
+                <i class="ph ph-arrow-square-out ph-xs"></i>
+            </a>
+        </div>
+    </div>
     <div class="footer">
-        <small>Sergio Forés <a href="https://github.com/t0t?tab=repositories" target="_blank" class="external-link icon-text">
+        <small>Sergio Forés <a href="https://github.com/t0t?tab=repositories" target="_blank" class="external-link icon-text"><!-- URL duplicada -->
             Instagram
             <i class="ph ph-instagram-logo ph-sm"></i>
         </a></small>
     </div>
+
+    <button class="scroll-to-top" aria-label="Volver arriba">
+        <i class="ph ph-arrow-up ph-bold ph-2x"></i>
+    </button>
+
+    <script>
+        // Botón de scroll al top
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+        // Mostrar/ocultar botón según la posición del scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add('visible');
+            } else {
+                scrollToTopButton.classList.remove('visible');
+            }
+        });
+
+        // Scroll suave al top al hacer click
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
