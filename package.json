@@ -1,0 +1,24 @@
+{
+  "name": "huerto_01234",
+  "version": "1.0.0",
+  "description": "Sistema de diseño minimalista basado en ritmo vertical y escala modular.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000 --no-browser",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t0t/huerto_01234.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t0t/huerto_01234/issues"
+  },
+  "homepage": "https://github.com/t0t/huerto_01234#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
