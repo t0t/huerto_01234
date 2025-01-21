@@ -1,93 +1,413 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout Elástico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * {
+        /* Reset moderno */
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        /* Eliminar estilos por defecto de las listas */
+        ul, ol {
+            list-style: none;
+        }
+
+        /* Mejorar el renderizado del texto */
+        html:focus-within {
+            scroll-behavior: smooth;
+        }
+
+        /* Establecer defaults útiles */
+        html, body {
+            height: 100%;
+            text-rendering: optimizeSpeed;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hacer que las imágenes sean más fáciles de trabajar */
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* Eliminar estilos de los botones */
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            font: inherit;
+        }
+
+        /* Heredar fuentes para inputs y botones */
+        input, button, textarea, select {
+            font: inherit;
+        }
+
+        /* Evitar problemas con text-overflow */
+        p, h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* Quitar animaciones y transiciones para personas que las tienen desactivadas */
+        @media (prefers-reduced-motion: reduce) {
+            html:focus-within {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Nuestras variables y estilos */
+        :root {
+            /* Sistema tipográfico basado en escala modular 1.25 y ritmo vertical */
+            --rhythm: 1.5rem;  /* Unidad base para el ritmo vertical */
+            --scale: 1.25;
+            
+            /* Sistema de espaciado basado en el ritmo */
+            --space-xxs: calc(var(--rhythm) * 0.25);  /* 0.375rem */
+            --space-xs: calc(var(--rhythm) * 0.5);    /* 0.75rem */
+            --space-s: var(--rhythm);                 /* 1.5rem */
+            --space-m: calc(var(--rhythm) * 2);       /* 3rem */
+            --space-l: calc(var(--rhythm) * 3);       /* 4.5rem */
+            --space-xl: calc(var(--rhythm) * 4);      /* 6rem */
+            --space-xxl: calc(var(--rhythm) * 6);     /* 9rem */
+            
+            /* Sistema tipográfico alineado con el ritmo */
+            --font-size-base: var(--rhythm);          /* 1.5rem */
+            --font-xs: calc(var(--font-size-base) / var(--scale));        /* 1.2rem */
+            --font-sm: var(--font-size-base);                             /* 1.5rem */
+            --font-md: calc(var(--font-size-base) * var(--scale));        /* 1.875rem */
+            --font-lg: calc(var(--font-size-base) * var(--scale) * 2);    /* 3.75rem */
+            
+            --font-family: "SoDo", "Montserrat", arial, sans-serif;
+            --line-height: 1;  /* Ajustamos line-height a 1 ya que los tamaños ya están en ritmo */
+            
+            /* Paleta de grises */
+            --white: hsl(0, 0%, 100%);     /* Blanco puro */
+            --gray-100: hsl(0, 0%, 95%);   /* Casi blanco */
+            --gray-200: hsl(0, 0%, 85%);   /* Gris claro */
+            --gray-300: hsl(0, 0%, 65%);   /* Gris medio */
+            --gray-400: hsl(0, 0%, 45%);   /* Gris oscuro */
+            --black: hsl(0, 0%, 0%);       /* Negro puro */
+
+            /* Color base y sus propiedades */
+            --primary-hue: 389;
+            --primary-saturation: 10%;
+            --primary-lightness: 44%;
+
+            /* Paleta de colores */
+            --color-primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+            --color-primary-100: hsl(var(--primary-hue), var(--primary-saturation), 90%);
+            --color-primary-200: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+            --color-primary-300: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+            --color-primary-400: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+            --color-primary-500: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+            --color-primary-600: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+            --color-primary-700: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+            --color-primary-800: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+            --color-primary-900: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+            
+            --color-secondary: hsl(45, 93%, 47%);   /* Amarillo dorado */
+            --color-accent: hwb(230 0% 0%);     /* Rojo intenso */
+            --color-neutral: hsl(168, 29%, 54%);    /* Verde agua */
         }
 
         body {
             min-height: 100vh;
             display: grid;
-            place-items: center;
+            gap: 1px;
             text-align: center;
+            font-family: var(--font-family);
+            line-height: var(--line-height);
+            font-size: var(--font-size-base);
+            letter-spacing: 0.02em;
+            background-color: var(--white);
+            color: var(--black);
+            padding: var(--space-xxl) var(--space-m) var(--space-m);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: var(--space-xl) var(--space-s) var(--space-s);
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: var(--space-l) var(--space-xs) var(--space-xs);
+            }
+        }
+
+        .hero {
+            display: grid;
+            gap: 1px;
+            margin-bottom: var(--space-xl);
+        }
+
+        .hero h1 {
+            font-size: var(--font-lg);
+            line-height: 1;
+            margin-bottom: var(--space-xs);
+        }
+
+        .hero h2 {
+            font-size: var(--font-md);
+            line-height: 1;
+            color: var(--gray-400);
+        }
+
+        .hero a {
+            color: var(--color-accent);
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: var(--space-xxs) var(--space-xs);
+            border-radius: 3px;
+            transition: background-color 0.2s;
+        }
+
+        .hero a:hover {
+            background-color: white;
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
         }
 
         .grid-container {
             width: 100%;
-            /* height: 100vh; */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-auto-rows: minmax(50px, auto);
-            gap: 0;
-            padding: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(calc(var(--rhythm) * 12), 1fr));
+            grid-auto-rows: minmax(calc(var(--rhythm) * 8), auto);
+            gap: 1px;
+            padding: var(--space-s);
         }
 
         .grid-item {
-            border: 1px solid #ccc;
-            border-radius: 4px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            transition: all 0.3s ease;
-            padding: 1rem;
+            padding: var(--space-m) var(--space-s);
+            gap: 1px;
+            position: relative;
         }
 
+        /* Ajuste automático del color del texto basado en el fondo */
         .grid-item h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1rem;
-            text-align: center;
+            mix-blend-mode: difference;
+            color: white;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            font-size: var(--font-sm);
+            line-height: 1;
+            margin-bottom: var(--space-xxs);
         }
 
-        .grid-item a {
-            color: #0066cc;
+        /* Contraste agresivo para párrafos */
+        .grid-item p {
+            mix-blend-mode: exclusion;
+            filter: contrast(200%) brightness(200%);
+            color: white;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+            font-weight: 500;
+            font-size: var(--font-xs);
+            line-height: 1.5;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Para fondos muy claros */
+        /* .grid-item:nth-child(-n+3) p {
+            filter: contrast(200%) brightness(0);
+            mix-blend-mode: difference;
+            color: black;
+        } */
+
+        /* Para fondos de luminosidad media */
+        .grid-item:nth-child(n+4):nth-child(-n+6) p {
+            filter: contrast(300%) brightness(150%);
+            mix-blend-mode: exclusion;
+        }
+
+        /* Para fondos oscuros */
+        .grid-item:nth-child(n+7) p {
+            filter: contrast(200%) brightness(300%);
+            mix-blend-mode: difference;
+        }
+
+        /* Enlaces siempre visibles - resetear el contraste */
+        .grid-item a,
+        .hero a {
+            mix-blend-mode: normal;
+            filter: none;
+            color: var(--color-accent);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: var(--font-xs);
+            line-height: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: var(--space-xxs) var(--space-xs);
+            margin-top: var(--space-xs);
+            border-radius: calc(var(--rhythm) * 0.125);  /* 0.1875rem */
+            transition: background-color 0.2s;
+            font-weight: normal;
+            position: relative;
+            z-index: 2;
         }
 
         .grid-item a:hover {
+            background-color: white;
             text-decoration: underline;
         }
 
-        .grid-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+        .grid-item:nth-child(1) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 95%); }
+        .grid-item:nth-child(2) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 90%); }
+        .grid-item:nth-child(3) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 85%); }
+        .grid-item:nth-child(4) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 80%); }
+        .grid-item:nth-child(5) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 75%); }
+        .grid-item:nth-child(6) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 70%); }
+        .grid-item:nth-child(7) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 65%); }
+        .grid-item:nth-child(8) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 60%); }
+        .grid-item:nth-child(9) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 55%); }
+        /* .grid-item:nth-child(10) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 50%); } */
+        .grid-item:nth-child(11) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 45%); }
+        .grid-item:nth-child(12) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 40%); }
+        .grid-item:nth-child(13) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 35%); }
+        .grid-item:nth-child(14) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 30%); }
+        .grid-item:nth-child(15) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 25%); }
+        .grid-item:nth-child(16) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 20%); }
+        .grid-item:nth-child(17) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 15%); }
+        .grid-item:nth-child(18) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 10%); }
+        .grid-item:nth-child(19) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 5%); }
+        .grid-item:nth-child(20) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 2%); }
     </style>
 </head>
+
 <body>
-    <div>
+    <div class="hero">
         <h1>huerto_01234</h1>
-        <h2>Mis proyectos en Github</h2>
+        <h2>Mis proyectos en <a href="https://github.com/t0t?tab=repositories" target="_blank"> Github</a></h2>
     </div>
     <div class="grid-container">
-        <div class="grid-item"><h3>Sergio Forés</h3><a href="http://sergiofores.es" target="_blank">sergiofores.es</a></div>
-        <div class="grid-item"><h3>Parcel</h3><a href="https://parcel-t0t.vercel.app/" target="_blank">parcel</a></div>
-        <div class="grid-item"><h3>Todh React</h3><a href="https://t0t.github.io/todh-react/#/?_k=o98uax" target="_blank">todh</a></div>
-        <div class="grid-item"><h3>SF</h3><a href="https://t0t.github.io/sf/#/?_k=arhci3" target="_blank">sf</a></div>
-        <div class="grid-item"><h3>01234</h3><a href="https://01234.vercel.app/" target="_blank">-01234</a></div>
-        <div class="grid-item"><h3>Noelia Requena</h3><a href="https://noeliarequena.com" target="_blank">noeliarequena.com</a></div>
-        <div class="grid-item"><h3>MF Barcelona</h3><a href="https://t0t.github.io/mfbarcelona/" target="_blank">mfbarcelona</a></div>
-        <div class="grid-item"><h3>Holistic Prototype</h3><a href="https://t0t.github.io/holistic-prototype/" target="_blank">holistic-prototype</a></div>
-        <div class="grid-item"><h3>Crea MiniDB</h3><a href="https://t0t.github.io/crea_minidb/" target="_blank">crea_minidb</a></div>
-        <div class="grid-item"><h3>Gematria App</h3><a href="https://gematriaapp.vercel.app/" target="_blank">gematriaapp</a></div>
-        <div class="grid-item"><h3>Repositorio v4</h3><a href="https://t0t.github.io/repositorio_01234_v4/" target="_blank">repositorio_01234_v4</a></div>
-        <div class="grid-item"><h3>Repositorio v3</h3><a href="https://t0t.github.io/repositorio_01234_v3/" target="_blank">repositorio_01234_v3</a></div>
-        <div class="grid-item"><h3>Repositorio v2</h3><a href="https://t0t.github.io/repositorio_01234" target="_blank">repositorio_01234_v2</a></div>
-        <div class="grid-item"><h3>Static Blog Landing</h3><a href="https://static-blog-landing.lovable.app/" target="_blank">static-blog-landing</a></div>
-        <div class="grid-item"><h3>Conceptual DB Vite</h3><a href="https://silver-sorbet-d12e2c.netlify.app/" target="_blank">conceptual_db_vite</a></div>
-        <div class="grid-item"><h3>Conceptual DB</h3><a href="https://stackblitz.com/edit/bolt-vitepress-y5rmb9vu?file=README.md" target="_blank">conceptual_db</a></div>
-        <div class="grid-item"><h3>Blog Minimalista</h3><a href="https://wondrous-melba-5d9c40.netlify.app/" target="_blank">blogminimalista</a></div>
-        <div class="grid-item"><h3>Minimal Art Store</h3><a href="#" target="_blank">minimal-art-store</a></div>
-        <div class="grid-item"><h3>01234 Design System</h3><a href="#" target="_blank">01234-design-system</a></div>
+        <div class="grid-item">
+            <h3>Sergio Forés</h3>
+            <p>Portfolio personal y blog sobre arte, diseño y desarrollo web</p>
+            <a href="http://sergiofores.es" target="_blank">sergiofores.es</a>
+        </div>
+        <div class="grid-item">
+            <h3>Parcel</h3>
+            <p>Experimentos con Parcel bundler y desarrollo web moderno</p>
+            <a href="https://parcel-t0t.vercel.app/" target="_blank">parcel</a>
+        </div>
+        <div class="grid-item">
+            <h3>Todh React</h3>
+            <p>Aplicación de gestión de tareas construida con React</p>
+            <a href="https://t0t.github.io/todh-react/#/?_k=o98uax" target="_blank">todh</a>
+        </div>
+        <div class="grid-item">
+            <h3>todh-react</h3>
+            <p>Aplicación de gestión de tareas construida con React</p>
+            <a href="https://t0t.github.io/todh-react/#/?_k=a5wh79" target="_blank">todh</a>
+        </div>
+        <div class="grid-item">
+            <h3>SF</h3>
+            <p>Proyecto personal de experimentación con React y diseño minimalista</p>
+            <a href="https://t0t.github.io/sf/#/?_k=arhci3" target="_blank">sf</a>
+        </div>
+        <div class="grid-item">
+            <h3>01234</h3>
+            <p>Proyecto de investigación sobre numerología y patrones</p>
+            <a href="https://01234.vercel.app/" target="_blank">-01234</a>
+        </div>
+        <div class="grid-item">
+            <h3>Noelia Requena</h3>
+            <p>Portfolio artístico y galería de obras</p>
+            <a href="https://noeliarequena.com" target="_blank">noeliarequena.com</a>
+        </div>
+        <div class="grid-item">
+            <h3>MF Barcelona</h3>
+            <p>Sitio web para estudio de masaje y fisioterapia</p>
+            <a href="https://t0t.github.io/mfbarcelona/" target="_blank">mfbarcelona</a>
+        </div>
+        <div class="grid-item">
+            <h3>Holistic Prototype</h3>
+            <p>Prototipo de aplicación para terapias holísticas</p>
+            <a href="https://t0t.github.io/holistic-prototype/" target="_blank">holistic-prototype</a>
+        </div>
+        <div class="grid-item">
+            <h3>Crea MiniDB</h3>
+            <p>Mini base de datos para gestión de proyectos creativos</p>
+            <a href="https://t0t.github.io/crea_minidb/" target="_blank">crea_minidb</a>
+        </div>
+        <div class="grid-item">
+            <h3>Gematria App</h3>
+            <p>Aplicación para cálculos y análisis de gematría</p>
+            <a href="https://gematriaapp.vercel.app/" target="_blank">gematriaapp</a>
+        </div>
+        <div class="grid-item">
+            <h3>Repositorio v4</h3>
+            <p>Cuarta versión del repositorio de conocimiento personal</p>
+            <a href="https://t0t.github.io/repositorio_01234_v4/" target="_blank">repositorio_01234_v4</a>
+        </div>
+        <div class="grid-item">
+            <h3>Repositorio v3</h3>
+            <p>Tercera iteración del sistema de gestión de conocimiento</p>
+            <a href="https://t0t.github.io/repositorio_01234_v3/" target="_blank">repositorio_01234_v3</a>
+        </div>
+        <div class="grid-item">
+            <h3>Repositorio v2</h3>
+            <p>Segunda versión del sistema de documentación personal</p>
+            <a href="https://t0t.github.io/repositorio_01234" target="_blank">repositorio_01234_v2</a>
+        </div>
+        <div class="grid-item">
+            <h3>Static Blog Landing</h3>
+            <p>Landing page minimalista para blog estático</p>
+            <a href="https://static-blog-landing.lovable.app/" target="_blank">static-blog-landing</a>
+        </div>
+        <div class="grid-item">
+            <h3>Conceptual DB Vite</h3>
+            <p>Base de datos conceptual construida con Vite</p>
+            <a href="https://silver-sorbet-d12e2c.netlify.app/" target="_blank">conceptual_db_vite</a>
+        </div>
+        <div class="grid-item">
+            <h3>Conceptual DB</h3>
+            <p>Sistema de organización de conceptos e ideas</p>
+            <a href="https://stackblitz.com/edit/bolt-vitepress-y5rmb9vu?file=README.md" target="_blank">conceptual_db</a>
+        </div>
+        <div class="grid-item">
+            <h3>Blog Minimalista</h3>
+            <p>Blog con diseño minimalista y enfoque en el contenido</p>
+            <a href="https://wondrous-melba-5d9c40.netlify.app/" target="_blank">blogminimalista</a>
+        </div>
+        <div class="grid-item">
+            <h3>Minimal Art Store</h3>
+            <p>Tienda de arte con diseño minimalista (en desarrollo)</p>
+            <a href="#" target="_blank">minimal-art-store</a>
+        </div>
+        <div class="grid-item">
+            <h3>01234 Design System</h3>
+            <p>Sistema de diseño basado en principios numerológicos</p>
+            <a href="#" target="_blank">01234-design-system</a>
+        </div>
     </div>
 </body>
+
 </html>
