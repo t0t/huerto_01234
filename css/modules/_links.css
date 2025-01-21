@@ -21,7 +21,6 @@
 }
 
 .grid-item:hover a {
-    transform: skewX(-5deg);
     filter: brightness(1.1);
 }
 
