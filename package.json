@@ -4,7 +4,12 @@
   "description": "Sistema de diseño minimalista basado en ritmo vertical y escala modular.",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server --port=3000 --no-browser",
+    "dev": "npm run dev:setup && live-server --port=3000 --no-browser",
+    "build:css": "postcss css/main.css -o dist/styles.css",
+    "update:css-link": "sed -i '' 's|css/main.css|dist/styles.css|' index.html",
+    "revert:css-link": "sed -i '' 's|dist/styles.css|css/main.css|' index.html",
+    "build": "npm run build:css && npm run update:css-link",
+    "dev:setup": "npm run revert:css-link",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +24,9 @@
   },
   "homepage": "https://github.com/t0t/huerto_01234#readme",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0"
   }
 }

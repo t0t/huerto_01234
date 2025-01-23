@@ -43,6 +43,10 @@
     --primary-saturation: 10%;
     --primary-lightness: 44%;
     
+    --color-background: #ffffff;
+    --color-text: #333333;
+    --color-text-secondary: #666666;
+    --color-border: #e0e0e0;
     --color-primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
     --color-accent: hwb(299 -27% 60%);
     --color-neutral: hsl(168, 29%, 54%);    /* Verde agua */
