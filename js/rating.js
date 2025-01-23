@@ -8,10 +8,29 @@ class RatingSystem {
 
     initializeEventListeners() {
         document.addEventListener('DOMContentLoaded', () => {
+            this.hideDeletedCards();
             this.initializeRatings();
             this.setupStarListeners();
             this.setupControlButtons();
         });
+    }
+
+    hideDeletedCards() {
+        this.gridContainers.forEach(container => {
+            const gridItems = container.querySelectorAll('.grid-item');
+            gridItems.forEach(item => {
+                const link = item.querySelector('a');
+                if (!link) return;
+                
+                if (this.isCardDeleted(link.href)) {
+                    item.remove();
+                }
+            });
+        });
+    }
+
+    isCardDeleted(url) {
+        return localStorage.getItem(`${RATING_CONFIG.DELETED_PREFIX}${url}`) === 'true';
     }
 
     initializeRatings() {
@@ -68,6 +87,9 @@ class RatingSystem {
         const link = gridItem.querySelector('a');
         if (!link) return;
 
+        // Marcar como eliminada en localStorage
+        localStorage.setItem(`${RATING_CONFIG.DELETED_PREFIX}${link.href}`, 'true');
+        
         // Eliminar el rating del localStorage
         localStorage.removeItem(`${RATING_CONFIG.STORAGE_PREFIX}${link.href}`);
 
