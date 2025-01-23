@@ -1,6 +1,6 @@
 :root {
     /* Sistema tipográfico basado en escala modular 1.25 y ritmo vertical */
-    --rhythm: 1.5rem;  /* Unidad base para el ritmo vertical */
+    --rhythm: 1.2rem;  /* Unidad base para el ritmo vertical */
     --scale: 1.25;
     
     /* Sistema de espaciado basado en el ritmo */

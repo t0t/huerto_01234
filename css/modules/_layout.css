@@ -18,6 +18,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(var(--rhythm) * 15), 1fr));
     grid-auto-rows: minmax(calc(var(--rhythm) * 8), auto);
+    gap: 1px;
 }
 
 /* Grid items */
@@ -26,38 +27,124 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--space-l) var(--space-m);
-    gap: 1px;
     position: relative;
+    cursor: pointer;
+    gap: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative;
+    min-height: calc(var(--rhythm) * 8);
+    /* border: 1px solid var(--color-border); */
+    transition: all 0.2s ease;
+}
+
+.grid-item:hover {
+    background-color: hsl(var(--primary-hue), var(--primary-saturation), 85%); ;
+}
+
+.grid-item > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--space-l) + 30px) var(--space-m);
+    gap: 1px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.grid-item:hover {
+/* .grid-item > a:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
+    text-decoration: none;
+} */
+
+.grid-item h3 {
+    margin: 0;
+    padding: 0;
 }
 
-/* Hacer que todo el grid-item sea clicable */
-.grid-item a {
-    position: static;
-}
-
-.grid-item a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+.grid-item p {
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero section */
 .hero {
     display: grid;
     gap: 1px;
-    margin-bottom: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+/* Rating System */
+.rating-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+}
+
+.rating {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.star.active {
+    color: var(--color-neutral);
+}
+
+.delete-card {
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-card:hover {
+    color: #ff4444;
+}
+
+/* Ajustar grid-item para el rating */
+.grid-item {
+    position: relative;
+}
+
+/* Rating Controls */
+.rating-controls {
+    display: flex;
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+}
+
+.rating-button {
+    padding: var(--space-s) var(--space-m);
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.rating-button:hover {
+    background-color: hsl(var(--primary-hue), var(--primary-saturation), 85%);
 }
 
 /* Footer */

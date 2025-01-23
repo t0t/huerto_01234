@@ -38,7 +38,7 @@ p, a {
 /* Paragraphs */
 .grid-item p {
     /* mix-blend-mode: difference; */
-    filter: contrast(200%) brightness(200%);
+    /* filter: contrast(200%) brightness(200%); */
     position: relative;
     z-index: 1;
     /* text-shadow: 0 1px 0 rgba(0,0,0,0.4); */
