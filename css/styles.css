@@ -1,12 +1,12 @@
 /* Base */
-@import 'modules/_reset.css';
-@import 'modules/_variables.css';
+@import './modules/_reset.css';
+@import './modules/_variables.css';
 
 /* Layout */
-@import 'modules/_layout.css';
+@import './modules/_layout.css';
 
 /* Components */
-@import 'modules/_typography.css';
-@import 'modules/_links.css';
-@import 'modules/_icons.css';
-@import 'modules/_colors.css';
+@import './modules/_typography.css';
+@import './modules/_links.css';
+@import './modules/_icons.css';
+@import './modules/_colors.css';
