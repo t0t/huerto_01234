@@ -240,5 +240,42 @@ class RatingSystem {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const ratings = document.querySelectorAll('.rating');
+    
+    ratings.forEach(rating => {
+        // Cargar rating guardado
+        const savedRating = localStorage.getItem(`rating-${rating.closest('a').href}`);
+        if (savedRating) {
+            rating.dataset.rating = savedRating;
+            updateStars(rating, parseInt(savedRating));
+        }
+
+        // Manejar click en estrellas
+        rating.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (e.target.tagName === 'I') {
+                const stars = rating.querySelectorAll('i');
+                const value = Array.from(stars).indexOf(e.target) + 1;
+                
+                rating.dataset.rating = value;
+                updateStars(rating, value);
+                
+                // Guardar en localStorage
+                localStorage.setItem(`rating-${rating.closest('a').href}`, value);
+            }
+        });
+    });
+});
+
+function updateStars(rating, value) {
+    const stars = rating.querySelectorAll('i');
+    stars.forEach((star, index) => {
+        star.classList.toggle('active', index < value);
+    });
+}
+
 // Initialize the rating system
 new RatingSystem();
