@@ -1,23 +1,28 @@
-body { background-color: hsl(var(--primary-hue), var(--primary-saturation), 80%); }
+:root {
+    /* Base Colors */
+    --color-white: rgba(255, 255, 255, 0.95);
+    --color-black: #111111;
+    
+    /* Accent Colors */
+    --color-accent-1: #ff00c1;
+    --color-accent-2: #00fff9;
+    
+    /* Gradient Colors */
+    --gradient-dark: linear-gradient(135deg, 
+        rgb(20, 20, 20) 0%,
+        rgb(30, 30, 30) 100%
+    );
+    
+    /* Glassmorphism */
+    --glass-background: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-hover: rgba(255, 255, 255, 0.05);
+    --glass-border-hover: rgba(255, 255, 255, 0.2);
+    
+    /* Text Colors */
+    --text-primary: rgba(255, 255, 255, 0.95);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.5);
+}
 
-/* Gradiente de colores para grid items */
-.grid-item { background-color: hsl(var(--primary-hue), var(--primary-saturation), 75%); }
-/* .grid-item:nth-child(2) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 90%); } */
-/* .grid-item:nth-child(3) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 85%); } */
-/* .grid-item:nth-child(4) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 80%); } */
-/* .grid-item:nth-child(5) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 75%); } */
-/* .grid-item:nth-child(6) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 70%); } */
-/* .grid-item:nth-child(7) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 65%); } */
-/* .grid-item:nth-child(8) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 60%); } */
-/* .grid-item:nth-child(9) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 55%); } */
-/* .grid-item:nth-child(10) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 50%); } */
-/* .grid-item:nth-child(11) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 45%); } */
-/* .grid-item:nth-child(12) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 40%); } */
-/* .grid-item:nth-child(13) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 35%); } */
-/* .grid-item:nth-child(14) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 30%); } */
-/* .grid-item:nth-child(15) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 25%); } */
-/* .grid-item:nth-child(16) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 20%); } */
-/* .grid-item:nth-child(17) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 15%); } */
-/* .grid-item:nth-child(18) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 10%); } */
-/* .grid-item:nth-child(19) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 5%); } */
-/* .grid-item:nth-child(20) { background-color: hsl(var(--primary-hue), var(--primary-saturation), 2%); } */
+body { background-color: var(--color-black); }

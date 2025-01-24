@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev:setup && live-server --port=3000 --no-browser",
+    "static": "npx http-server . -p 3000 -c-1",
+    "serve": "node server.js",
     "build:css": "postcss css/main.css -o dist/styles.css",
     "update:css-link": "sed -i '' 's|css/main.css|dist/styles.css|' index.html",
     "revert:css-link": "sed -i '' 's|dist/styles.css|css/main.css|' index.html",
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/t0t/huerto_01234#readme",
   "devDependencies": {
+    "express": "^4.18.2",
     "live-server": "^1.2.2",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
