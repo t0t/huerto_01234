@@ -25,6 +25,18 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 - Rendimiento de animaciones
 - Compatibilidad con diferentes navegadores
 
+## [1.1.0] - 2025-01-25
+
+### Changed
+- Mejorada la nitidez de los textos con `text-rendering: optimizeLegibility`
+- Eliminada la retícula del fondo para una apariencia más limpia
+- Ajustados los tiempos de transición para una mejor experiencia de usuario
+- Eliminados los efectos de sombra en textos para mayor legibilidad
+- Optimizado el sistema de rating para evitar conflictos con los enlaces
+
+### Added
+- Configuración de .gitignore para excluir archivos de desarrollo
+
 ## [1.1.0] - 2024-01-24
 
 ### Added
@@ -41,6 +53,17 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 - Resuelto problema de carga inconsistente de estilos
 - Eliminada la carga alternada entre diseños
 - Mejorada la estabilidad general de la aplicación
+
+## [1.0.0] - 2025-01-24
+
+### Added
+- Sistema de rating con estrellas
+- Almacenamiento local de ratings
+- Funcionalidad de ordenar por rating
+- Funcionalidad de resetear ratings
+- Diseño responsivo con grid
+- Efectos visuales y transiciones
+- Servidor de desarrollo para pruebas locales
 
 ## [1.0.0] - 2024
 

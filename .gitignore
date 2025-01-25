@@ -1,5 +1,17 @@
 # Dependencies
 node_modules/
+package-lock.json
+
+# Development
+server.js
+
+# Environment
+.env
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db
 
 # Build
 dist/
@@ -7,10 +19,6 @@ dist/
 # IDE
 .vscode/
 .idea/
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Logs
 *.log

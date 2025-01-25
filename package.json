@@ -7,9 +7,9 @@
     "dev": "npm run dev:setup && live-server --port=3000 --no-browser",
     "static": "npx http-server . -p 3000 -c-1",
     "serve": "node server.js",
-    "build:css": "postcss css/main.css -o dist/styles.css",
-    "update:css-link": "sed -i '' 's|css/main.css|dist/styles.css|' index.html",
-    "revert:css-link": "sed -i '' 's|dist/styles.css|css/main.css|' index.html",
+    "build:css": "postcss css/bundle.css -o dist/styles.css",
+    "update:css-link": "sed -i '' 's|css/bundle.css|dist/styles.css|' index.html",
+    "revert:css-link": "sed -i '' 's|dist/styles.css|css/bundle.css|' index.html",
     "build": "npm run build:css && npm run update:css-link",
     "dev:setup": "npm run revert:css-link",
     "test": "echo \"Error: no test specified\" && exit 1"
