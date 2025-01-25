@@ -73,6 +73,10 @@ body {
     line-height: var(--line-height);
     letter-spacing: 0.1em;
     font-weight: lighter;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Background */
@@ -92,49 +96,33 @@ body {
     animation: gradientShift 15s ease infinite;
 }
 
-.animated-gradient-background-soft::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(255, 255, 255, 0.03) 0%,
-            transparent 50%
-        ),
-        linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.02) 1px, 
-            transparent 1px
-        ),
-        linear-gradient(0deg, 
-            rgba(255, 255, 255, 0.02) 1px, 
-            transparent 1px
-        );
-    background-size: 100% 100%, 20px 20px, 20px 20px;
-    pointer-events: none;
-    animation: subtle-noise 20s infinite linear;
-    opacity: 0.7;
-}
-
 /* Typography */
-h1,h2 {
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 h1 {
     font-size: var(--font-size-xl);
-    line-height: 1.2;
-    margin-bottom: 1rem;
     letter-spacing: 8px;
+    background: linear-gradient(45deg, #7FC538, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-h3, h2 {
+h2 {
     font-size: var(--font-size-md);
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-family-mono);
+    margin: 0;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: var(--font-size-md);
     font-family: var(--font-family-mono);
     margin: 0;
     position: relative;
@@ -146,6 +134,7 @@ p {
     line-height: 1.6;
     margin: 0;
     opacity: 0.8;
+    font-weight: 400;
 }
 
 small {
@@ -158,12 +147,11 @@ small {
     display: block;
     text-decoration: none;
     color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .external-link:hover {
     color: var(--color-white);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .icon-text {
@@ -200,20 +188,30 @@ small {
 }
 
 .grid-item {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
-    transition: all 0.3s ease;
-    position: relative;
+    transition: all 0.1s ease;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.03);
 }
 
 .grid-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
     align-self: flex-start;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0;
+    font-weight: 400;
 }
 
 .grid-item::before {
@@ -230,14 +228,14 @@ small {
         transparent
     );
     transform: translateX(-100%);
-    transition: transform 0.6s ease;
+    transition: transform 0.2s ease;
 }
 
 .grid-item:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .grid-item:hover::before {
@@ -281,7 +279,6 @@ small {
     display: flex;
     justify-content: left;
     gap: 2rem;
-    /* margin: 2rem 0; */
 }
 
 .rating-button {
@@ -293,7 +290,6 @@ small {
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
@@ -321,7 +317,7 @@ small {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .rating-button:hover::before {
@@ -420,14 +416,12 @@ small {
 
 .glitch-text::before {
     left: 2px;
-    text-shadow: -2px 0 #ff00c1;
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
 .glitch-text::after {
     left: -2px;
-    text-shadow: 2px 0 #00fff9;
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim-2 5s infinite linear alternate-reverse;
 }
