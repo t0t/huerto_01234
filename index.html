@@ -1,476 +1,311 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<!DOCTYPE html><html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>huerto 01234</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-    
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="css/bundle.css?v=1706127861">
+    <title>Enlaces Esenciales</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="animated-gradient-background-soft"></div>
-    <div class="content-wrapper">
-        <div class="rating-controls">
-            <button id="sort-by-rating" class="rating-button">Ordenar por rating</button>
-            <button id="reset-ratings" class="rating-button">Resetear ratings</button>
-        </div>
+    <nav class="navbar">
+        <h1>Enlaces Esenciales</h1>
+    </nav>
 
-        <div class="hero">
+    <main class="link-directory">
+        <a href="https://t0t.github.io/sergiofores-main/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-0.jpg" alt="Vista previa de Otro sitio general de Sergio Forés" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-0.jpg" alt="Captura completa de Otro sitio general de Sergio Forés" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Otro sitio general de Sergio Forés</span>
+                <span class="link-description">last version</span>
+            </div>
+        </a>
 
-            <h1>🌱 <br> huerto 01234</h1>
-            <h2>web-apps en
-                <a href="https://github.com/t0t?tab=repositories" target="_blank" class="external-link icon-text">
-                    Github <i class="ph ph-github-logo ph-md"></i></a>
-            </h2>
-        </div>
-        <div class="grid-container">
-            <a href="https://t0t.github.io/sergiofores-main/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Otro sitio general de Sergio Forés</h3>
-                <p>last version</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://o1234.lovable.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>01234 (04)</h3>
-                <p>last version</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/cerounodostrescuatro/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Oficial Page of 01234</h3>
-                <p>pues eso</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/podcast_API/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Podcast API</h3>
-                <p>Archivo de podcasts</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="http://sergiofores.es" target="_blank" class="grid-item external-link icon-text">
-                <h3>Sergio Forés</h3>
-                <p>Portfolio personal y blog sobre arte, diseño y desarrollo web</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/sergiofores_art_01234/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Sergio Forés Art 2</h3>
-                <p>Portfolio de obra pástica 2</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/sergiofores_art/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Sergio Forés Art</h3>
-                <p>Portfolio de obra pástica</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/sergiofores_dev/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Sergio Forés Development</h3>
-                <p>Portfolio de desarrollo web</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://parcel-t0t.vercel.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Parcel</h3>
-                <p>Experimentos con Parcel bundler y desarrollo web moderno</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://moneyfly.netlify.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Money Fly</h3>
-                <p>App para gestión de gastos</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/todh-react/#/?_k=o98uax" target="_blank" class="grid-item external-link icon-text">
-                <h3>Todh React</h3>
-                <p>Aplicación de gestión de tareas construida con React</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/sf/#/?_k=arhci3" target="_blank" class="grid-item external-link icon-text">
-                <h3>SF</h3>
-                <p>Proyecto personal de diseño minimalista</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://01234.vercel.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>01234</h3>
-                <p>Proyecto de investigación sobre numerología y patrones</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://noeliarequena.com" target="_blank" class="grid-item external-link icon-text">
-                <h3>Noelia Requena</h3>
-                <p>Portfolio artístico y galería de obras</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/mfbarcelona/" target="_blank" class="grid-item external-link icon-text">
-                <h3>MF Barcelona</h3>
-                <p>Sitio web para estudio de masaje y fisioterapia</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/holistic-prototype/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Holistic Prototype</h3>
-                <p>Prototipo de aplicación para terapias holísticas</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/crea_minidb/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Crea MiniDB</h3>
-                <p>Mini db de ideas</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://gematriaapp.vercel.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Gematria App</h3>
-                <p>App para cálculos y análisis de gematría</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/repositorio_01234_v4/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Repo v4</h3>
-                <p>Repositorio de conocimiento personal</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/repositorio_01234_v3/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Repo v3</h3>
-                <p>Tercera iteración del sistema de gestión de conocimiento</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://t0t.github.io/repositorio_01234" target="_blank" class="grid-item external-link icon-text">
-                <h3>Repo v2</h3>
-                <p>Segunda versión del sistema de documentación personal</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://static-blog-landing.lovable.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Static Blog Landing</h3>
-                <p>Landing page minimalista para blog estático</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://silver-sorbet-d12e2c.netlify.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Conceptual DB Vite</h3>
-                <p>Base de datos conceptual construida con Vite</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://stackblitz.com/edit/bolt-vitepress-y5rmb9vu?file=README.md" target="_blank" class="grid-item external-link icon-text">
-                <h3>Concept DB</h3>
-                <p>Sistema de organización de conceptos e ideas</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://wondrous-melba-5d9c40.netlify.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Blog Minimal</h3>
-                <p>Blog con diseño minimalista y enfoque en el contenido</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://wondrous-melba-5d9c40.netlify.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Minimal Art Store</h3>
-                <p>Tienda de arte minimalista</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://silver-sorbet-d12e2c.netlify.app/" target="_blank" class="grid-item external-link icon-text">
-                <h3>01234 Design System</h3>
-                <p>Sistema de diseño basado en principios numerológicos</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-        </div>
+        <a href="https://o1234.lovable.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-1.jpg" alt="Vista previa de 01234 (04)" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-1.jpg" alt="Captura completa de 01234 (04)" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">01234 (04)</span>
+                <span class="link-description">last version</span>
+            </div>
+        </a>
 
-        <div class="hero">
-            <h1>IA App Tools🌱</h1>
-            <h2>Selección</h2>
-        </div>
+        <a href="https://t0t.github.io/cerounodostrescuatro/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-2.jpg" alt="Vista previa de Oficial Page of 01234" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-2.jpg" alt="Captura completa de Oficial Page of 01234" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Oficial Page of 01234</span>
+                <span class="link-description">pues eso</span>
+            </div>
+        </a>
 
-        <div class="grid-container">
-            <a href="https://www.hoverstat.es/archive/" target="_blank" class="grid-item external-link icon-text">
-                <h3>HOVER STAT.es</h3>
-                <p>Archivos de inspiración UI/UX</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://storyteller.mootion.com/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Mootion</h3>
-                <p>Turn your ideas into visual stories</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
+        <a href="https://t0t.github.io/podcast_API/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-3.jpg" alt="Vista previa de Podcast API" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-3.jpg" alt="Captura completa de Podcast API" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Podcast API</span>
+                <span class="link-description">Archivo de podcasts</span>
+            </div>
+        </a>
 
-            <a href="https://hailuoai.video" target="_blank" class="grid-item external-link icon-text">
-                <h3>Hailuo AI</h3>
-                <p>Creación de videos con IA</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
+        <a href="https://www.sergiofores.es/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-4.jpg" alt="Vista previa de Sergio Forés" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-4.jpg" alt="Captura completa de Sergio Forés" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Sergio Forés</span>
+                <span class="link-description">Portfolio personal y blog sobre arte, diseño y desarrollo web</span>
+            </div>
+        </a>
 
-            <a href="https://suno.com/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Suno</h3>
-                <p>Generación de música con IA</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
+        <a href="https://t0t.github.io/sergiofores_art_01234/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-5.jpg" alt="Vista previa de Sergio Forés Art 2" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-5.jpg" alt="Captura completa de Sergio Forés Art 2" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Sergio Forés Art 2</span>
+                <span class="link-description">Portfolio de obra pástica 2</span>
+            </div>
+        </a>
 
-            <a href="https://www.perplexity.ai/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Perplexity AI</h3>
-                <p>Motor de búsqueda con IA</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
+        <a href="https://t0t.github.io/sergiofores_art/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-6.jpg" alt="Vista previa de Sergio Forés Art" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-6.jpg" alt="Captura completa de Sergio Forés Art" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Sergio Forés Art</span>
+                <span class="link-description">Portfolio de obra pástica</span>
+            </div>
+        </a>
 
-            <a href="https://hiber3d.com/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Hiber3D</h3>
-                <p>Plataforma de modelado 3D</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://elevenlabs.io/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Eleven Labs.</h3>
-                <p>Generación de musica con IA</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://www.freepik.com/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Freepik</h3>
-                <p>generativa de fotos y videos</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-            <a href="https://app.leonardo.ai/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Leonardo AI</h3>
-                <p>generativa de fotos y videos</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
+        <a href="https://t0t.github.io/sergiofores_dev/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-7.jpg" alt="Vista previa de Sergio Forés Development" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-7.jpg" alt="Captura completa de Sergio Forés Development" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Sergio Forés Development</span>
+                <span class="link-description">Portfolio de desarrollo web</span>
+            </div>
+        </a>
 
-            <a href="https://notebooklm.google.com/" target="_blank" class="grid-item external-link icon-text">
-                <h3>Notebook LM</h3>
-                <p>Cuaderno de notas con IA de Google</p>
-                <div class="rating" data-rating="0">
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                    <i class="ph ph-star"></i>
-                </div>
-            </a>
-        </div>
-        <div class="footer">
-            <small>Sergio Forés <a href="https://github.com/t0t?tab=repositories" target="_blank"
-                    class="external-link icon-text">
-                    Instagram<i class="ph ph-instagram-logo ph-sm"></i>
-                </a></small>
-        </div>
+        <a href="https://parcel-t0t.vercel.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-8.jpg" alt="Vista previa de Parcel" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-8.jpg" alt="Captura completa de Parcel" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Parcel</span>
+                <span class="link-description">Experimentos con Parcel bundler y desarrollo web moderno</span>
+            </div>
+        </a>
 
-        <button class="scroll-to-top" aria-label="Volver arriba">
-            <i class="ph ph-arrow-up ph-bold ph-2x"></i>
-        </button>
-    </div>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="./js/rating.js"></script>
-    <script type="module" src="./js/config.js"></script>
-    <script type="module" src="./js/scroll.js"></script>
-</body>
-</html>
+        <a href="https://moneyfly.netlify.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-9.jpg" alt="Vista previa de Money Fly" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-9.jpg" alt="Captura completa de Money Fly" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Money Fly</span>
+                <span class="link-description">App para gestión de gastos</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/todh-react/#/?_k=o98uax" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-10.jpg" alt="Vista previa de Todh React" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-10.jpg" alt="Captura completa de Todh React" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Todh React</span>
+                <span class="link-description">Aplicación de gestión de tareas construida con React</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/sf/#/?_k=arhci3" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-11.jpg" alt="Vista previa de SF" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-11.jpg" alt="Captura completa de SF" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">SF</span>
+                <span class="link-description">Proyecto personal de diseño minimalista</span>
+            </div>
+        </a>
+
+        <a href="https://01234.vercel.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-12.jpg" alt="Vista previa de 01234" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-12.jpg" alt="Captura completa de 01234" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">01234</span>
+                <span class="link-description">Proyecto de investigación sobre numerología y patrones</span>
+            </div>
+        </a>
+
+        <a href="https://noeliarequena.com" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-13.jpg" alt="Vista previa de Noelia Requena" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-13.jpg" alt="Captura completa de Noelia Requena" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Noelia Requena</span>
+                <span class="link-description">Portfolio artístico y galería de obras</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/mfbarcelona/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-14.jpg" alt="Vista previa de MF Barcelona" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-14.jpg" alt="Captura completa de MF Barcelona" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">MF Barcelona</span>
+                <span class="link-description">Sitio web para estudio de masaje y fisioterapia</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/holistic-prototype/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-15.jpg" alt="Vista previa de Holistic Prototype" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-15.jpg" alt="Captura completa de Holistic Prototype" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Holistic Prototype</span>
+                <span class="link-description">Prototipo de aplicación para terapias holísticas</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/crea_minidb/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-16.jpg" alt="Vista previa de Crea MiniDB" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-16.jpg" alt="Captura completa de Crea MiniDB" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Crea MiniDB</span>
+                <span class="link-description">Mini db de ideas</span>
+            </div>
+        </a>
+
+        <a href="https://gematriaapp.vercel.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-17.jpg" alt="Vista previa de Gematria App" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-17.jpg" alt="Captura completa de Gematria App" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Gematria App</span>
+                <span class="link-description">App para cálculos y análisis de gematría</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/repositorio_01234_v4/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-18.jpg" alt="Vista previa de Repo v4" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-18.jpg" alt="Captura completa de Repo v4" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Repo v4</span>
+                <span class="link-description">Repositorio de conocimiento personal</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/repositorio_01234_v3/templates/index.html" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-19.jpg" alt="Vista previa de Repo v3" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-19.jpg" alt="Captura completa de Repo v3" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Repo v3</span>
+                <span class="link-description">Tercera iteración del sistema de gestión de conocimiento</span>
+            </div>
+        </a>
+
+        <a href="https://t0t.github.io/repositorio_01234" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-20.jpg" alt="Vista previa de Repo v2" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-20.jpg" alt="Captura completa de Repo v2" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Repo v2</span>
+                <span class="link-description">Segunda versión del sistema de documentación personal</span>
+            </div>
+        </a>
+
+        <a href="https://static-blog-landing.lovable.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-21.jpg" alt="Vista previa de Static Blog Landing" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-21.jpg" alt="Captura completa de Static Blog Landing" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Static Blog Landing</span>
+                <span class="link-description">Landing page minimalista para blog estático</span>
+            </div>
+        </a>
+
+        <a href="https://silver-sorbet-d12e2c.netlify.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-22.jpg" alt="Vista previa de Conceptual DB Vite" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-22.jpg" alt="Captura completa de Conceptual DB Vite" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Conceptual DB Vite</span>
+                <span class="link-description">Base de datos conceptual construida con Vite</span>
+            </div>
+        </a>
+
+        <a href="https://stackblitz.com/edit/bolt-vitepress-y5rmb9vu?file=README.md" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-23.jpg" alt="Vista previa de Concept DB" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-23.jpg" alt="Captura completa de Concept DB" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Concept DB</span>
+                <span class="link-description">Sistema de organización de conceptos e ideas</span>
+            </div>
+        </a>
+
+        <a href="https://wondrous-melba-5d9c40.netlify.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-24.jpg" alt="Vista previa de Blog Minimal" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-24.jpg" alt="Captura completa de Blog Minimal" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Blog Minimal</span>
+                <span class="link-description">Blog con diseño minimalista y enfoque en el contenido</span>
+            </div>
+        </a>
+
+        <a href="https://wondrous-melba-5d9c40.netlify.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-25.jpg" alt="Vista previa de Minimal Art Store" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-25.jpg" alt="Captura completa de Minimal Art Store" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">Minimal Art Store</span>
+                <span class="link-description">Tienda de arte minimalista</span>
+            </div>
+        </a>
+
+        <a href="https://silver-sorbet-d12e2c.netlify.app/" class="link-item" target="_blank" rel="noopener noreferrer">
+            <div class="screenshots-container">
+                <img class="screenshot-thumbnail" src="screenshots/screenshot-26.jpg" alt="Vista previa de 01234 Design System" loading="lazy">
+                <img class="screenshot-thumbnail" src="screenshots/full/screenshot-26.jpg" alt="Captura completa de 01234 Design System" loading="lazy">
+            </div>
+            <div class="link-content">
+                <span class="link-title">01234 Design System</span>
+                <span class="link-description">Sistema de diseño basado en principios numerológicos</span>
+            </div>
+        </a>
+    </main>
+
+</body></html>

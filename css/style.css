@@ -1,0 +1,196 @@
+/* Estilos minimalistas en escala de grises cálidos y escalado proporcional de fuentes */
+
+:root {
+  font-size: 16px;
+  /* Escala proporcional de fuentes */
+  --font-scale: 1.125; /* Escala base */
+  --warm-gray-100: #f5f5f5;
+  --warm-gray-200: #e0e0e0;
+  --warm-gray-400: #a8a8a8;
+  --warm-gray-800: #404040;
+}
+
+body {
+  background-color: var(--warm-gray-100);
+  color: var(--warm-gray-800);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid var(--warm-gray-200);
+  padding: 1rem 1.25rem;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 1.25rem;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--warm-gray-800);
+  font-weight: bold;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+a {
+  color: var(--warm-gray-800);
+  text-decoration: none;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sistema de escalado proporcional de fuentes */
+h1 {
+  font-size: calc(2.5rem * var(--font-scale));
+}
+
+h2 {
+  font-size: calc(2rem * var(--font-scale));
+}
+
+h3 {
+  font-size: calc(1.5rem * var(--font-scale));
+}
+
+p, small, li {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+/* Ajuste para el contenedor grid minimalista */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--warm-gray-200);
+  border-top: 1px solid var(--warm-gray-200);
+}
+
+/* Estilos minimalistas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.link-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.screenshots-container {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  background: var(--warm-gray-200);
+}
+
+.screenshot-thumbnail {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.screenshot-thumbnail:first-child {
+  border-right: 1px solid var(--warm-gray-200);
+}
+
+.screenshot-thumbnail:last-child {
+  border-left: 1px solid var(--warm-gray-200);
+}
+
+.link-item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: fit-content;
+}
+
+.link-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--warm-gray-800);
+  margin: 0;
+}
+
+.link-description {
+  font-size: 1rem;
+  color: var(--warm-gray-400);
+  margin: 0;
+}
+
+.link-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.link-item:hover .screenshot-thumbnail {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .link-directory {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .screenshots-container {
+    height: 300px;
+  }
+}
